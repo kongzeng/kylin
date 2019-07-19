@@ -43,6 +43,7 @@
 
     <bean class="org.apache.kylin.rest.security.PasswordPlaceholderConfigurer">
         <property name="ignoreResourceNotFound" value="true"/>
+        <property name="fileEncoding" value="UTF-8" />
     </bean>
 
 

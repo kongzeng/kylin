@@ -47,12 +47,12 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- Hadoop versions -->
-        <hadoop2.version>3.1.0</hadoop2.version>
-        <yarn.version>3.1.0</yarn.version>
+        <hadoop2.version>2.7.6</hadoop2.version>
+        <yarn.version>2.7.6</yarn.version>
 
         <!-- Hive versions -->
-        <hive.version>3.1.0</hive.version>
-        <hive-hcatalog.version>3.1.0</hive-hcatalog.version>
+        <hive.version>1.2.2</hive.version>
+        <hive-hcatalog.version>1.2.2</hive-hcatalog.version>
 
         <!-- HBase versions -->
         <hbase-hadoop2.version>2.0.0</hbase-hadoop2.version>
@@ -1297,7 +1297,7 @@
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
                 <!-- uncomment this on release -->
-                <!--<version>3.4.1</version>-->
+                <version>3.3.1</version>
             </plugin>
         </plugins>
     </build>

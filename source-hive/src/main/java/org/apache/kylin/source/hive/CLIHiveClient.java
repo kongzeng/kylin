@@ -27,6 +27,8 @@ import org.apache.hadoop.hive.metastore.api.Table;
 import org.apache.kylin.common.KylinConfig;
 import org.apache.kylin.common.util.HiveCmdBuilder;
 import org.apache.kylin.common.util.Pair;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.List;
@@ -40,6 +42,7 @@ import java.util.Map;
 public class CLIHiveClient implements IHiveClient {
     protected HiveConf hiveConf = null;
     protected HiveMetaStoreClient metaStoreClient = null;
+    private static final Logger logger = LoggerFactory.getLogger(CLIHiveClient.class);
 
     public CLIHiveClient() {
         hiveConf = new HiveConf(CLIHiveClient.class);
@@ -128,6 +131,7 @@ public class CLIHiveClient implements IHiveClient {
     }
 
     private HiveMetaStoreClient getMetaStoreClient() throws Exception {
+        logger.error("------hiveConf:"+ hiveConf.getClass().getName());
         if (metaStoreClient == null) {
             metaStoreClient = new HiveMetaStoreClient(hiveConf);
         }
